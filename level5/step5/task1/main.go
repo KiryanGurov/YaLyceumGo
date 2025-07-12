@@ -63,7 +63,6 @@ func ratingSort(players []Player) []Player {
 			return -1
 		}
 		return strings.Compare(a.Name, b.Name)
-
 	})
 	return players
 }
@@ -73,7 +72,6 @@ func gmSort(players []Player) []Player {
 	slices.SortFunc(players, func(a, b Player) int {
 		a_gm, b_gm := a.calculateRatio(), b.calculateRatio()
 		if a_gm != b_gm {
-
 			if a_gm < b_gm {
 				return 1
 			}
